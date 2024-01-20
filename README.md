@@ -1,2 +1,2 @@
-# SofiaC_Page
-Personal Page and Blog
+# SofiaC_Web
+Personal Web and Blog
