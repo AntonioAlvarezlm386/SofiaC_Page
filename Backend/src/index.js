@@ -1,7 +1,15 @@
-import express from 'express'
+import app from './app.js'
+import { PORT } from './config.js'
+import { sequelize } from './db/dbConnection.js'
 
-const app = express()
 
-
-app.listen(3000)
-console.log("server listen on port 3000")
+async function main(){
+    try {
+        await sequelize.sync()
+        app.listen(PORT)
+        console.log('> DB connection successfully')
+        console.log('> App listen on port', PORT)
+    } catch (error) {
+        console.error('Unable to connect to the DB', error.message)
+    }
+}
