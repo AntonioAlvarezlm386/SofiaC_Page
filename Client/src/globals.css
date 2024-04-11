@@ -1,7 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+@font-face {
+  font-family: 'Le Jour Serif';
+  src: url(./assets/fonts/LeJourSerif.ttf) format('truetype');
+}
+
+*{
+  font-family: 'Le Jour Serif';
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
